@@ -1,0 +1,10 @@
+\begin{circuitikz}[american voltages]
+\draw
+(0,0) node[op amp, noinv input up] (opamp) {}
+(opamp.+) to ++(-2,0) to [sinusoidal voltage source=$V_{in}$] ++(0,-3) node [ground] {}
+(opamp.out) to ++(1,0) coordinate(vo) to ++(1,0) node[right] {$v_{out}$}
+(opamp.-) to ++(0,-1) coordinate(tmp)
+(tmp) to[R=$R_1$,*-] ++(0,-2) node[ground] {}
+(tmp) to[R=$R_2$] ++(3.25,0) to [short,-*] ++(0,1.5)
+;
+\end{circuitikz}
